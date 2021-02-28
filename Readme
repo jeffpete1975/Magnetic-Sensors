@@ -1,0 +1,21 @@
+I'm trying to make an escape room puzzle where 4 or more hall effect sensors activate a mag lock.  I've done this with a single sensor but I'm very new to coding and cant seem to figure out how to make this happen.  Here is the code I've written but can't seem to get it to work:
+int relay = 7;
+int reed_switch1 = A0;
+int reed_switch2 = A1;
+int reed_status1;
+
+void setup()
+{
+  pinMode(relay, OUTPUT);
+  pinMode(reed_switch1, reed_switch2 INPUT);
+  
+}
+
+void loop()
+{reed_status1 = digitalRead(reed_switch1 && reed_switch2);
+   if (reed_status1 == 1)
+    digitalWrite(relay, LOW);
+  else
+    digitalWrite(relay, HIGH);
+  delay(1000);
+}
